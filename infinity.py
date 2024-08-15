@@ -7,13 +7,11 @@ from pydantic import ValidationError
 from models import Image, Setup
 from processing import processor
 
-parser = argparse.ArgumentParser(description='Check for image similarity')
+parser = argparse.ArgumentParser(description='Check if images show the same product')
 parser.add_argument(
-    '-y',
-    '--yaml',
+    'yaml',
     type=argparse.FileType(),
     help='YAML file with execution settings.',
-    required=True,
 )
 
 
